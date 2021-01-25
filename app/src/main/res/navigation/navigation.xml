@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ydh.budayabyl.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_loginFragment_to_navigation2"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.ydh.budayabyl.view.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <navigation android:id="@+id/navigation_home"
+        app:startDestination="@id/homeFragment">
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.ydh.budayabyl.view.HomeFragment"
+            android:label="fragment_home"
+            tools:layout="@layout/fragment_home" >
+            <action
+                android:id="@+id/action_homeFragment_to_detailFragment"
+                app:destination="@id/detailFragment"
+                app:popUpTo="@id/homeFragment"
+                app:popUpToInclusive="false" />
+            <action
+                android:id="@+id/action_homeFragment_to_searchFragment"
+                app:destination="@id/searchFragment"
+                app:popUpTo="@id/homeFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_categoryFragment"
+                app:destination="@id/categoryFragment"
+                app:popUpTo="@id/homeFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_notificationFragment"
+                app:destination="@id/notificationFragment"
+                app:popUpTo="@id/homeFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/detailFragment"
+            android:name="com.ydh.budayabyl.view.DetailFragment"
+            android:label="fragment_detail"
+            tools:layout="@layout/fragment_detail" >
+            <argument
+                android:name="site"
+                app:argType="com.ydh.budayabyl.model.Site" />
+        </fragment>
+        <fragment
+            android:id="@+id/searchFragment"
+            android:name="com.ydh.budayabyl.view.SearchFragment"
+            android:label="fragment_search"
+            tools:layout="@layout/fragment_search" />
+        <fragment
+            android:id="@+id/categoryFragment"
+            android:name="com.ydh.budayabyl.view.CategoryFragment"
+            android:label="fragment_category"
+            tools:layout="@layout/fragment_category" >
+            <action
+                android:id="@+id/action_categoryFragment_to_detailFragment"
+                app:destination="@id/detailFragment"
+                app:popUpTo="@id/categoryFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/notificationFragment"
+            android:name="com.ydh.budayabyl.view.NotificationFragment"
+            android:label="fragment_notification"
+            tools:layout="@layout/fragment_notification" />
+    </navigation>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.ydh.budayabyl.view.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_authFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>

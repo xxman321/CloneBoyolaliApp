@@ -1,0 +1,36 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext{
+        kotlin_version = "1.4.10"
+        glide_version = "4.11.0"
+        nav_version = "2.3.1"
+        glide_version = "4.11.0"
+        kotlin_coroutines_version = "1.1.0"
+        lifecycle_version = "2.2.0"
+        live_data_version = "2.3.0-alpha03"
+        view_model_version = "2.3.0-alpha03"
+        koin_version = "2.2.1"
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.3.4'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.4.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

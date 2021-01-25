@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "15937392249",
+    "firebase_url": "https://budaya-byl.firebaseio.com",
+    "project_id": "budaya-byl",
+    "storage_bucket": "budaya-byl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15937392249:android:9e520c498c3a246c438ea8",
+        "android_client_info": {
+          "package_name": "com.ydh.budayabyl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15937392249-1naekv6hqp2ou64eq8i0tpagne3kfiiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1XTRSEyP7Fv9e0ZJhYrNpF9sv_hjf8Ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15937392249-1naekv6hqp2ou64eq8i0tpagne3kfiiu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
